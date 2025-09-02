@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Note taking sytem</title>
+    <link rel="stylesheet" href="login.css">
+
+    <style>
+        .hidden{
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+
+        <div class="left">
+
+           <div class="writingImg">
+            <img id="writeImg" src="writing.gif" alt="">
+           </div>
+        </div>
+     
+
+        <div class="right" >
+            <div id="loginForm">
+            <h1>Create your own notes</h1>
+      
+        <div class="profileImg">
+            <img src="profile.jpg" alt="profile">
+        </div>
+
+        <div class="info">
+            
+            <input type="email" placeholder="Email" autofocus required >
+            <input type="password" placeholder="Password" required>
+        </div>
+
+        <div class="buttons">
+             <div class="button">
+            <button class="btn login" id="login" >Login</button>
+            </div>  
+            <p id="para">_______ or _______</p>
+            <div class="low">
+            <p>Don't have an account?</p> <a href="#" id="showRegister">Register now</a>
+        </div>
+          </div>
+        </div>
+
+
+
+    <div id="registerForm" class="hidden" >
+            <h1>Create your own notes</h1>
+       
+        <div class="profileImg">
+            <img src="profile.jpg" alt="profile">
+        </div>
+
+        <div class="info">
+            <input type="text" placeholder="Username" autofocus required>
+            <input type="email" placeholder="Email" required>
+            <input type="password" placeholder="Password" required>
+        </div>
+
+        <div class="buttons" >
+             <div class="button">
+            <button class="btn register" id="register" >Register</button>
+            </div>  
+            <p id="para">_______ or _______</p>
+            <div class="low">
+            <p>Already have an account?</p> <a href="#" id="showLogin">Login now</a>
+        </div>
+        </div>
+        </div>
+
+  
+    </div>
+
+<script src="loginRegister.js"></script>
+    
+</body>
+</html>
