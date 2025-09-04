@@ -1,0 +1,26 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+:root{
+    --theme-color:rgb(175, 172, 172);
+}
+.right .searchBar{
+    height: 100px;
+    width: 60%;
+    margin: auto;
+    background-color: var(--theme-color);
+    box-sizing: border-box;
+    padding: 20px;
+    font-size: 20px;
+    color: white;
+}
+.inputBox{
+    display: flex;
+    align-items: center;
+}
+
+.inputBox input{
+    height: 50px;
+    width: 60%;
+}

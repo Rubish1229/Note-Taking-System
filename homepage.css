@@ -53,18 +53,105 @@ display: flex;
     padding: 10px 0;
      border-bottom: 1px solid white;
      padding-top: 40px;
+     text-decoration: none;
      
     
 }
+.left ul li a{
+    color: rgb(255, 251, 251);
+    text-decoration: none;
+}
+.left ul li a:hover{
+    color: rgb(225, 224, 224);
+    
+}
+
+
 .exit{
     display: flex;
     justify-content: center;
-    margin-top: 23rem;    
+    margin-top: 22rem;    
 }
 .exit i{
     color: white;
     margin: auto;
     font-size: 30px;
+    cursor: pointer;
+    
+}
+.exit i:hover  {
+   font-size: 50px;
+   transition: all 0.3s ease-in-out;
+}
+.icon{
+    padding: 0 10px;
+}
+.noteBox{
+    background-color: rgb(211, 206, 206);
+    height: 150px;
     
 }
 
+.box{
+    /* width: 75%; */
+    display: flex;
+    /* border: 2px solid white; */
+}
+.right{
+    width: 75%;
+    border: 2px solid white;
+}
+.noteBox{
+    width: 1000px;
+    min-height: 80vh;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    margin: auto;
+    margin-top: 20px;
+     padding: 15px 15px;
+}
+.outline{
+    border: 2px solid white;
+    padding: 15px 15px;
+}
+
+
+.divs input{
+    height: 40px;
+    width: 97%;
+    margin: 10px;
+    padding: 0 20px;
+    box-sizing: border-box;
+    font-size: 20px;
+    
+    
+} 
+.note{
+    height: 80vh;
+    width: 97%;
+    margin: 10px;
+     padding: 0 20px;
+    box-sizing: border-box;
+    font-size: 20px;
+
+}
+
+.submitBtn{
+    text-align: center;
+
+}
+.submitBtn button{
+        background-color: rgb(47, 64, 249);
+        color: white;
+        height: 40px;
+        width: 90px;
+        border-radius: 20px;
+        cursor: pointer;
+        font-size: 20px;
+}
+
+.submitBtn button:hover{
+ border-radius: 20px;
+    transform:scale(1.1) ;
+     transition: all 0.6s ease; 
+} 
