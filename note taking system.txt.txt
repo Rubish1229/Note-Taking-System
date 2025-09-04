@@ -1,0 +1,70 @@
+/* @author : Rubish karmacharya
+   @date: 
+    @rollNumber : Rubish karmacharya
+   @courseCode:
+    @databaseName : notedb
+
+*/
+
+mysql -u root -p
+
+CREATE DATABASE notedb;
+
+USE notedb;
+
+CREATE TABLE Users(u_id INT(10) AUTO_INCREMENT PRIMARY KEY,
+	 u_name VARCHAR(50) NOT NULL,
+	 u_email VARCHAR(50) UNIQUE,
+	 u_password VARCHAR(50) NOT NULL);
+CREATE TABLE Categories(c_id INT(10) AUTO_INCREMENT PRIMARY KEY,
+	 c_name VARCHAR(50) NOT NULL,
+	 c_created TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+	 u_updated TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+	User_id INT(10) NOT NULL, FOREIGN KEY (User_id) REFERENCES Users(u_id)
+	ON DELETE CASCADE 
+	ON UPDATE CASCADE);
+CREATE TABLE Notes(n_id INT(10) AUTO_INCREMENT PRIMARY KEY,
+	 n_title VARCHAR(50),
+	 n_note VARCHAR(50),
+	 n_created TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+	n_updated TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+	User_id INT(10) NOT NULL, FOREIGN KEY (User_id) REFERENCES Users(u_id)
+	ON DELETE CASCADE 
+	ON UPDATE CASCADE);
+CREATE TABLE Category_note(Category_id INT(10) ,Note_id INT(10), 
+PRIMARY KEY(category_id,note_id) , FOREIGN KEY(category_id)REFERENCES Categories(c_id),
+ FOREIGN KEY(note_id) REFERENCES Notes(n_id));
+
+
+
+#####################################################
+INSERT INTO Users (u_name, u_email, u_password) VALUES("Ram","karmacahryarubish5@gmail.com","123");
+INSERT INTO Categories (c_name,user_id) VALUES("Assignments",1),("Personal",1);
+INSERT INTO Notes (n_title,n_note,User_id) VALUES("Day 1","its day onw of coding feeling great",1),("Personal diary","Becoming better version of me myself",1);
+INSERT INTO Category_note VALUES(1,1);
+
+######collection view.php
+SELECT 
+    Users.u_name, 
+    Categories.c_name, 
+    Notes.n_note
+FROM Users
+JOIN Notes ON Users.u_id = Notes.User_id
+JOIN Category_note ON Notes.n_id = Category_note.Note_id
+JOIN Categories ON Category_note.Category_id = Categories.c_id;
+
+######search by title
+SELECT u_name,c_name,n_title,n_note FROM Users 
+JOIN Notes ON Users.u_id=Notes.User_id
+JOIN Category_note ON Notes.n_id=Category_note.Note_id
+JOIN Categories ON Category_note.Category_id=Categories.c_id
+WHERE n_title LIKE "Day 1";
+
+
+
+
+
+
+
+
+
