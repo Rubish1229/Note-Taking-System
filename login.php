@@ -21,7 +21,9 @@ if($_SERVER['REQUEST_METHOD']=='POST'){
 
             $_SESSION['user_id']=$user['u_id'];
             $_SESSION['username']=$user['u_name'];
-            echo"login successful";
+            header("Location: firstpage.php");
+            exit();
+            // echo"login successful";
         }else{
             echo "incorrect passowrd";
         }

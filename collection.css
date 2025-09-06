@@ -1,0 +1,51 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+.collectionSide h1{
+    text-align: center;
+    margin: 30px;
+    
+    /* width: 100%; */
+}
+
+.tb{
+    display: flex;
+    justify-content: center;
+    margin: 10px 120px;
+    border-collapse: collapse;
+
+    
+
+}   
+
+.collectionSide .tb {
+    text-align: left;
+    
+}
+
+.collectionSide .tb tr, .tb td{
+    padding: 15px 10px;
+}
+
+.tb th{
+    text-align: center;
+    padding: 10px;
+}
+
+.update{
+    color: rgb(14, 14, 185);
+    text-decoration: none;
+    cursor: pointer;
+}
+.delete{
+    color: red;
+    text-decoration: none;
+    cursor: pointer;
+}
+.main{
+    margin: 30px auto;
+}

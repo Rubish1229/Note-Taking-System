@@ -15,7 +15,8 @@ $stmt->bind_param("sss",$u_name,$u_email,$u_password);
 
 
 if($stmt->execute()){
-    echo"Registration successful";
+   header("Location: login.html");
+   exit();
 }
 else{
     echo"error in registration". $stmt->error;
@@ -24,8 +25,6 @@ else{
 $stmt->close();
 
 }
-else{
-    echo"please fill all";
-}
+
 $con->close();
 ?>

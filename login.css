@@ -141,4 +141,13 @@ body{
 
 .hidden{
     display: none;
+    
+}
+#registerForm{
+    padding-top: 40px;
+}
+
+#registerForm h1{
+    padding-left: 40px;
+font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }

@@ -1,0 +1,63 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.updateForm{
+    margin: 30px auto;
+    
+}
+p{
+    font-size: 20px;
+}
+.first ,.second{
+    display: flex;
+    gap: 20px ;
+    margin: 20px    ;
+}
+.first input{
+    width: 290px;
+}
+.second textarea{
+    height: 400px;
+    width: 600px;
+    max-height: 50vh;
+    overflow-x: hidden;
+    overflow-y: scroll;
+}
+.head{
+   display: flex;
+   justify-content: center;
+}
+h1{
+    margin: 0 auto;
+}
+.updateForm{
+    margin: 50px;
+}
+
+
+.main{
+    margin: auto;
+    
+}
+
+.btn{
+    text-align: center;
+}
+.btn button{
+    /* text-align: center; */
+     background-color: rgb(179, 180, 192);
+        color: white;
+        height: 40px;
+        width: 90px;
+        border-radius: 18px;
+        cursor: pointer;
+        font-size: 20px;
+}
+.btn button:hover{
+     border-radius: 20px;
+    transform:scale(1.08) ;
+     transition: all 0.3s ease; 
+} 

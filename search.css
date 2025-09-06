@@ -1,0 +1,54 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.right .divv1{
+    /* display: flex; */
+    text-align: center;
+    margin: 40px;
+}
+.divv1 input{
+    height: 40px;
+    width: 210px;
+    margin: 10px;
+    border-radius: 5px;
+    padding: 0px 8px;
+}
+.searchBtn  {
+    height: 40px;
+    width: 90px;
+    border-radius: 5px;
+    background-color: rgb(221, 221, 221);
+}
+.searchBtn:hover {
+    transform: scale(1.1);
+    transition: all 0.3s ease-out;
+    cursor: pointer;
+    border-radius: 15px;
+}
+
+.right .divv2{
+    text-align: center;
+    margin: 60px;
+   
+    
+}
+.right .divv2 .tab {
+      text-align: center;
+      display: flex;
+      justify-content: center;
+      border: none;
+      width: 100%;
+    margin: 20px;
+}
+.divv2 .tab table{
+    width: 100%;
+    background-color: gray;
+
+}
+.tab th,.tab td{
+    padding: 15px;
+    text-align: left;
+
+    
+}
